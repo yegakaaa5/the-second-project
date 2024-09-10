@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منو</title>
+    <link rel="stylesheet" href="./scss/menu.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/tailwind/tailwind.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 336px;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 336px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <header>
+        <div class="logo">
+            <img src="../assistent/image/Logo.png" alt="logo">
+            <img src="../assistent/image/logo-name.png" alt="logo-name">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/main-page/main.html">صفحه اصلی</a></li>
+                <li><a href="/menu-page/menu.html">منو</a></li>
+                <li><a href="/aboutUs-page/about.html">درباره ما</a></li>
+                <li><a href="/contactUs-page/contact.html">تماس با ما</a></li>
+            </ul>
+        </nav>
+        <div class="left-icon">
+            <img class="search" src="../assistent/image/search-normal.png" alt="">
+            <img class="cart" src="../assistent/image/shopping-cart.png" alt="">
+            <img class="user" src="../assistent/image/user.png" alt="">
+        </div>
+    </header>
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+        space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        <swiper-slide><img src="/assistent/image/slider1.699bc78293e5c1991ab2.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="/assistent/image/slider2.699bc78293e5c1991ab2.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="/assistent/image/slider3.64b8b2422d8f52b7d808 (1).jpg" alt=""></swiper-slide>
+    </swiper-container>
+
+    <div class="tabs">
+        <ul class="tab-groupe">
+            <li class="tab">غذای اصلی</li>
+            <li class="tab">پیش غذا</li>
+            <li class="tab">دسر</li>
+            <li class="tab">نوشیدنی</li>
+        </ul>
+    </div>
+    <br>
+    <div class="the-foods">
+        <div class="persian-food">
+            <img src="/assistent/image/arrow-left.png" alt="">
+            <p>غذاهای ایرانی</p>
+        </div>
+        <div class="non-persian-food">
+            <img src="/assistent/image/arrow-left.png" alt="">
+            <p>غذاهای غیر ایرانی</p>
+        </div>
+        <div class="pizza">
+            <img src="/assistent/image/arrow-left.png" alt="">
+            <p>پیتزا</p>
+        </div>
+        <div class="sandwich">
+            <img src="/assistent/image/arrow-left.png" alt="">
+            <p>ساندویچ</p>
+        </div>
+    </div>
+    <br><br><br>
+
+    <section class="foods">
+
+        <h2>غذاهای ایرانی</h2>
+        <br><br>
+        <div class="space">
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-kofte.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>کوفته برنجی</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>برنج سبزی کوفته لپه آرد نخودچی، گردو و زرشک و آلو پیاز</span>
+                        <div class="off">35%</div>
+                        <div class="price">180000</div><br>
+                        <div class="now-price">تومان 145000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte ">
+                <img src="/assistent/image/Food Picture-kashk.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>کشک بادمجان</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span> بادمجان، کشک، نعناع خشک، مغز گردو، سیر، پیاز</span>
+                        <div class="now-price">تومان 145000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+            </div><br />
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-ghasemi.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>میرزا قاسمی</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>بادمجان، گوجه فرنگی، تخم مرغ، سیر، رب گوجه فرنگی</span>
+                        <div class="off">10%</div>
+                        <div class="price">165000</div><br>
+                        <div class="now-price">تومان 142500</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-dolmeh.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>دلمه برگ مو</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span> کشک، گردو، پیاز، نعناع خشک</span>
+                        <div class="off">18%</div>
+                        <div class="price">150000</div><br>
+                        <div class="now-price">تومان 136000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-koko.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>کوکو سبزی</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>تخم مرغ، گردو، سیر، آرد، روغن مایع
+                            سبزی کوکویی</span>
+                        <div class="off">35%</div>
+                        <div class="price">180000</div><br>
+                        <div class="now-price">تومان 145000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+        <br><br>
+        <h2>غذاهای غیر ایرانی</h2>
+        <br>
+        <div class="space">
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-pasta.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پاستا سبزیجات</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>برنج سبزی کوفته لپه آرد نخودچی، گردو و زرشک و آلو پیاز</span>
+                        <div class="off">35%</div>
+                        <div class="price">180000</div><br>
+                        <div class="now-price">تومان 145000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-blonz.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پاستا بلونز</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>اسپاگتی، گوشت چرخ کرده، هویج، ساقه کرفس، گوجه فرنگی، سیر، پیاز،..</span>
+                        <div class="off">12%</div>
+                        <div class="price">170000</div><br>
+                        <div class="now-price">تومان 160000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-lazania.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>لازانیا</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>لازانیا، قارچ، ریحان تازه، جعفری تازه، گوجه فرنگی، پنیر پیتزا، بادمجان</span>
+                        <div class="now-price">تومان 160000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-sushi.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>سوشی</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>جلبک دریایی/ نوری، برنج کته، سرکه سفید (یا سرکه برنج)، شکر، نمک دریا</span>
+                        <div class="off">15%</div>
+                        <div class="price">100000</div><br>
+                        <div class="now-price">تومان 85000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <br><br>
+        <h2>پیتزا ها</h2>
+        <br>
+        <div class="space">
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-rokola.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پیتزا روکولا</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>اسفناج، سبزی روکولا، آرد، پودر مایه خمیر، روغن زیتون، خردل، سیر، پنیر موزارلا ... </span>
+                        <div class="off">12%</div>
+                        <div class="price">195000</div><br>
+                        <div class="now-price">تومان 188000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-gharch.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پیتزا قارچ</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>قارچ، فلفل دلمه ای، رب گوجه فرنگی، پودر سیر، آویشن، مرزه، پنیر پیتزا گیاهی</span>
+                        <div class="off">25%</div>
+                        <div class="price">215000</div><br>
+                        <div class="now-price">تومان 175000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-peprony.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پیتزا پپرونی</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>لتافو، فلفل قرمز خشک شده، پودر دانه‌های خردل، دانه رازیانه، پاپریکا دودی، پودر سیر، شکر
+                            نارگیل، پودر بادیان رومی </span>
+                        <div class="now-price">تومان 100000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-chese.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پیتزا پنیر</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>نان پیتزا، پنیر پیتزا، سس باربیکیو، گوجه فرنگی، سس کچاپ، سیر، روغن زیتون</span>
+                        <div class="off">16%</div>
+                        <div class="price">125000</div><br>
+                        <div class="now-price">تومان 105000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-esfenaj.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پیتزا اسفناج</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>نان پیتزا، پنیر پیتزا، سس باربیکیو، گوجه فرنگی، سس کچاپ، سیر، روغن زیتون</span>
+                        <div class="off">10%</div>
+                        <div class="price">280000</div><br>
+                        <div class="now-price">تومان 252000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <br><br>
+        <h2>ساندویچ ها</h2>
+        <br><br>
+        <div class="space">
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-kotlet.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>ساندویچ کتلت مخصوص</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>سیب زمینی، لوبیا قرمز، بلغور گندم، نعناع خشک، پودر زیره، پودر جوز هندی...</span>
+                        <div class="off">35%</div>
+                        <div class="price">180000</div><br>
+                        <div class="now-price">تومان 145000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="kofte ">
+                <img src="/assistent/image/Food Picture-sosis.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>ساندویچ سوسیس کتلت</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>سوسیس گیاهی، پیاز، سیب زمینی، رب گوجه فرنگی</span>
+                        <div class="off">35%</div>
+                        <div class="price">205000</div><br>
+                        <div class="now-price">تومان 165000</div>
+
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+            </div><br />
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-kado.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>ساندویچ کتلت کدو سبز</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span>کدو سبز، هویج، سیب زمینی، پیاز</span>
+                        <div class="now-price">تومان 145000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="kofte">
+                <img src="/assistent/image/Food Picture-panini.png" alt="">
+                <div class="details">
+                    <div class="line-1">
+                        <h2>پنینی اسفناج</h2>
+                        <img src="/assistent/image/heart.png" alt="">
+                    </div><br>
+                    <div class="price-recipe">
+                        <span> قارچ، اسفناج، پیاز، پنیر پیتزا، خامه، پودر پاپریکا، گردو، سرکه بالزامیک، سس مایونز</span>
+                        <div class="off">15%</div>
+                        <div class="price">210000</div><br>
+                        <div class="now-price">تومان 190000</div>
+                    </div><br>
+                    <div class="line-3">
+                        <div class="stars">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                            <img src="/assistent/image/Star empty.png" alt="">
+                        </div>
+                        <button>افزودن به سبد خرید</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="easy-access">
+            <b class="easy">دسترسی آسان</b>
+            <div class="social-media-parent">
+                <div class="footer-text">
+                    <p class="p">پرسش های متدوال</p>
+                </div>
+                <div class="footer-text1">
+                    <p class="p">قوانین ترخینه</p>
+                </div>
+                <div class="footer-text2">
+                    <p class="p">حریم خصوصی</p>
+                </div>
+                <div class="social-icon">
+                    <img class="footer-icon" src="/assistent/image/Footer icons-insta.png" alt="">
+                    <img class="footer-icon" src="/assistent/image/Footer icons-tel.png" alt="">
+                    <img class="footer-icon" src="/assistent/image/Footer icons-x.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="the-branches">
+            <b class="branches">شعبه های ترخینه</b>
+            <div class="branch-parent">
+                <div class="ekb">
+                    <p>شعبه اکباتان</p>
+                </div>
+                <div class="ekb">
+                    <p>شعبه چالوس</p>
+                </div>
+                <div class="ekb">
+                    <p>شعبه اقدسیه</p>
+                </div>
+                <div class="ekb">
+                    <p>شعبه ونک</p>
+                </div>
+            </div>
+        </div>
+        <div class="massage">
+            <b>پیام به ترخینه</b>
+            <div class="right bg-transparent">
+                <form action="">
+                    <input class="bg-transparent" type="text" name="name&lastname" id=""
+                        placeholder="نام و نام خانوادگی"><br>
+                    <input class="bg-transparent " type="number" name="phoneNumber" id="" placeholder="شماره تماس"><br>
+                    <input class="bg-transparent" type="email" name="email" id="" placeholder="آدرس ایمیل (اختیاری)">
+                </form>
+            </div>
+            <div class="left bg-transparent">
+                <form action="">
+                    <input class="bg-transparent" type="tel" name="your-massage" id="" placeholder="پیام شما">
+                    <input class="bg-transparent" type="submit" value="ارسال پیام">
+                </form>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+</body>
+
+</html

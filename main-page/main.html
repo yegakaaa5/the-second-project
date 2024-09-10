@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رستوران ترخینه</title>
+    <link rel="stylesheet" href="./scss/main.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./tailwind/tailwind.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        swiper-container {
+            width: 100%;
+            height: 336px;
+        }
+
+        swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 336px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body dir="rtl">
+    <header>
+        <div class="logo">
+            <img src="../assistent/image/Logo.png" alt="logo">
+            <img src="../assistent/image/logo-name.png" alt="logo-name">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./main.html">صفحه اصلی</a></li>
+                <li><a href="/menu-page/menu.html">منو</a></li>
+                <li><a href="/aboutUs-page/about.html">درباره ما</a></li>
+                <li><a href="/contactUs-page/contact.html">تماس با ما</a></li>
+            </ul>
+        </nav>
+        <div class="left-icon">
+            <img class="search" src="../assistent/image/search-normal.png" alt="">
+            <img class="cart" src="../assistent/image/shopping-cart.png" alt="">
+            <img class="user" src="../assistent/image/user.png" alt="">
+        </div>
+    </header>
+
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true"
+        space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+        <swiper-slide><img src="/assistent/image/slider1.699bc78293e5c1991ab2.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="/assistent/image/slider2.699bc78293e5c1991ab2.jpg" alt=""></swiper-slide>
+        <swiper-slide><img src="/assistent/image/slider3.64b8b2422d8f52b7d808 (1).jpg" alt=""></swiper-slide>
+    </swiper-container>
+
+    <b class="menu">منوی رستوران</b>
+    <div class="restaurant-menu">
+        <div class="main-food">
+            <img src="/assistent/image/main-food-img.png" alt="">
+            <div class="bg-1">
+                <div class="button-1"><a href="">غذای اصلی</a></div>
+            </div>
+
+        </div>
+        <div class="appetizer">
+            <img src="/assistent/image/appetizer-img.png" alt="">
+            <div class="bg-2">
+                <div class="button-2"><a href="">پیش غذا</a></div>
+            </div>
+        </div>
+        <div class="dessert">
+            <img src="/assistent/image/dessert.png" alt="">
+            <div class="bg-3">
+                <div class="button-3"><a href="">دسر</a></div>
+            </div>
+        </div>
+        <div class="drink">
+            <img src="/assistent/image/drink-img.png" alt="">
+            <div class="bg-4">
+                <div class="button-4"><a href="">نوشیدنی</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="the-restuarant">
+        <div class="about">
+            <div class="text-button">
+                <div class="text">
+                    <b class="b">رستوران‌های زنجیره‌ای ترخینه</b>
+                    <div class="div">مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که بیش از 20
+                        سال است خدمت‌گزار مردم شریف ایران هستیم. ما در رستوران‌های زنجیره‌ای ترخینه همواره تلاش کردیم که
+                        در محیطی اصیل بر پایه معماری و طراحی مدرن در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما
+                        عزیزان ارائه دهیم.</div>
+                </div>
+                <div class="button">
+                    <div class="div1">اطلاعات بیشتر</div>
+                    <img class="left-icon" alt="" src="/assistent/image/arrow-left.png">
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="div">
+                <div class="div1">
+                    <img class="icon" src="/assistent/image/diagram.png" alt="">
+                    <div class="div2">کیفیت بالای غذاها</div>
+                </div>
+
+                <div class="div3">
+                    <img class="icon" src="/assistent/image/user2.png" alt="">
+                    <div class="div2">پرسنلی مجرب و حرفه ای</div>
+                </div>
+            </div>
+            <div class="div">
+                <div class="div3">
+                    <img class="icon" alt="" src="/assistent/image/menu-board.png">
+                    <div class="div2">منوی متنوع</div>
+                </div>
+                <div class="div1">
+                    <img class="icon" alt="" src="/assistent/image/home-wifi.png">
+                    <div class="div2">محیطی دلنشین و آرام</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <b class="tarkhineh">ترخینه گردی</b>
+    <div class="branch">
+        <div class="ekbatan">
+            <img src="/assistent/image/ekbatan.png" alt="">
+            <div class="address1">
+                <b>شعبه اکباتان</b>
+                <span>شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم</span>
+            </div>
+        </div>
+        <div class="chalus">
+            <img src="/assistent/image/chalus.jpg" alt="">
+            <div class="address2">
+                <b>شعبه چالوس</b>
+                <span>چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی</span>
+            </div>
+        </div>
+        <div class="aqdasiye">
+            <img src="/assistent/image/aghdasiyeh.png" alt="">
+            <div class="address3">
+                <b>شعبه اقدسیه</b>
+                <span>خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸</span>
+            </div>
+        </div>
+        <div class="vanak">
+            <img src="/assistent/image/vanak.png" alt="">
+            <div class="address4">
+                <b>شعبه ونک</b>
+                <span>میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶</span>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="easy-access">
+            <b class="easy">دسترسی آسان</b>
+            <div class="social-media-parent">
+                <div class="footer-text">
+                    <p class="p">پرسش های متدوال</p>
+                </div>
+                <div class="footer-text1">
+                    <p class="p">قوانین ترخینه</p>
+                </div>
+                <div class="footer-text2">
+                    <p class="p">حریم خصوصی</p>
+                </div>
+                <div class="social-icon">
+                    <img class="footer-icon" src="/assistent/image/Footer icons-insta.png" alt="">
+                    <img class="footer-icon" src="/assistent/image/Footer icons-tel.png" alt="">
+                    <img class="footer-icon" src="/assistent/image/Footer icons-x.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="the-branches">
+            <b class="branches">شعبه های ترخینه</b>
+            <div class="branch-parent">
+                <div class="ekb">
+                    <p>شعبه اکباتان</p>
+                </div>
+                <div class="ekb">
+                    <p>شعبه چالوس</p>
+                </div>
+                <div class="ekb">
+                    <p>شعبه اقدسیه</p>
+                </div>
+                <div class="ekb">
+                    <p>شعبه ونک</p>
+                </div>
+            </div>
+        </div>
+        <div class="massage">
+            <b>پیام به ترخینه</b>
+            <div class="right bg-transparent">
+                <form action="">
+                    <input class="bg-transparent" type="text" name="name&lastname" id=""
+                        placeholder="نام و نام خانوادگی"><br>
+                    <input class="bg-transparent " type="number" name="phoneNumber" id="" placeholder="شماره تماس"><br>
+                    <input class="bg-transparent" type="email" name="email" id="" placeholder="آدرس ایمیل (اختیاری)">
+                </form>
+            </div>
+            <div class="left bg-transparent">
+                <form action="">
+                    <input class="bg-transparent" type="tel" name="your-massage" id="" placeholder="پیام شما">
+                    <input class="bg-transparent" type="submit" value="ارسال پیام">
+                </form>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
