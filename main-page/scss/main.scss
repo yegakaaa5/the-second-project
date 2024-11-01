@@ -122,308 +122,139 @@ b.menu {
 }
 
 div.restaurant-menu {
-
+    position: relative;
+    top: 200px;
+    width: 100%;
     display: flex;
-    align-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #353535;
+    font-family: estedad;
 
-    div.main-food {
+    // Flex item base styles
+    div {
+        width: 100%; // Full width for smaller screens
+        max-width: 287px; // Limit max-width for larger screens
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
         >img {
             z-index: 1;
-            position: absolute;
+            position: relative;
             margin: 0 !important;
             max-width: 100%;
             overflow: hidden;
             height: 240px;
             flex-shrink: 0;
-            top: 600px;
-            right: 100px;
             transition: 400ms;
+            top: 70px;
 
             &:hover {
-                position: absolute;
-                top: 550px;
+                top: -150px;
             }
         }
 
-        div.bg-1 {
+        .bg-1,
+        .bg-2,
+        .bg-3,
+        .bg-4 {
             z-index: 0;
-            width: 287px;
-            flex: 1;
+            width: 100%;
             position: relative;
-            box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01),
+                0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09),
+                0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             background-color: #417f56;
-            border: 1px #417f56;
-            box-sizing: border-box;
             height: 160px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 0px 8px;
-            gap: 17px;
+            padding: 0 8px;
             text-align: center;
             font-size: 20px;
             color: #353535;
             font-family: estedad;
-            top: 270px;
-            right: 80px;
 
-            >div.button-1 {
+            .button-1,
+            .button-2,
+            .button-3,
+            .button-4 {
                 >a {
                     width: 170px;
                     text-decoration: none;
-                    z-index: 2;
-                    position: absolute;
+                    position: relative;
                     margin: 0 !important;
-                    top: 136px;
+                    top: 10px;
                     border-radius: 4px;
                     background-color: #f9f9f9;
                     height: 48px;
-                    overflow: hidden;
-                    flex-shrink: 0;
                     display: flex;
-                    flex-direction: row;
                     align-items: center;
                     justify-content: center;
                     padding: 8px 16px;
-                    box-sizing: border-box;
-                    text-align: center;
                     font-size: 20px;
                     color: #353535;
                     font-family: estedad;
-                    box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-                    right: 55px;
+                    box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01),
+                        0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09),
+                        0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
                 }
-
             }
         }
     }
 
-    div.appetizer {
-        >img {
-            z-index: 1;
-            position: absolute;
-            margin: 0 !important;
+    // Media Queries for Responsiveness
+    @media (max-width: 1024px) {
+        flex-direction: row;
+        gap: 15px;
+
+        div {
+            max-width: 220px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+
+        div {
+            width: 100%;
             max-width: 100%;
-            overflow: hidden;
-            height: 240px;
-            flex-shrink: 0;
-            top: 600px;
-            right: 403px;
-            transition: 400ms;
-
-            &:hover {
-                position: absolute;
-                top: 550px;
-            }
-        }
-
-        div.bg-2 {
-            z-index: 0;
-            width: 287px;
-            flex: 1;
-            position: relative;
-            box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            background-color: #417f56;
-            border: 1px #417f56;
-            box-sizing: border-box;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0px 8px;
-            gap: 17px;
-            text-align: center;
-            font-size: 20px;
-            color: #353535;
-            font-family: estedad;
-            top: 270px;
-            right: 95px;
-
-            >div.button-2 {
-                >a {
-                    width: 170px;
-                    text-decoration: none;
-                    z-index: 2;
-                    position: absolute;
-                    margin: 0 !important;
-                    top: 136px;
-                    border-radius: 4px;
-                    background-color: #f9f9f9;
-                    height: 48px;
-                    overflow: hidden;
-                    flex-shrink: 0;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 8px 16px;
-                    box-sizing: border-box;
-                    text-align: center;
-                    font-size: 20px;
-                    color: #353535;
-                    font-family: estedad;
-                    box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-                    right: 55px;
-                }
-
-            }
         }
     }
 
+    @media (max-width: 480px) {
+        top: 100px;
+        gap: 10px;
 
-    div.dessert {
-        >img {
-            z-index: 1;
-            position: absolute;
-            margin: 0 !important;
-            max-width: 100%;
-            overflow: hidden;
-            height: 240px;
-            flex-shrink: 0;
-            top: 600px;
-            right: 706px;
-            transition: 400ms;
-
-            &:hover {
-                position: absolute;
-                top: 550px;
+        div {
+            >img {
+                height: 180px;
             }
-        }
 
-        div.bg-3 {
-            z-index: 0;
-            width: 287px;
-            flex: 1;
-            position: relative;
-            box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            background-color: #417f56;
-            border: 1px #417f56;
-            box-sizing: border-box;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0px 8px;
-            gap: 17px;
-            text-align: center;
-            font-size: 20px;
-            color: #353535;
-            font-family: estedad;
-            top: 270px;
-            right: 110px;
+            .bg-1,
+            .bg-2,
+            .bg-3,
+            .bg-4 {
+                height: 140px;
+                font-size: 18px;
 
-            >div.button-3 {
-                >a {
-                    width: 170px;
-                    text-decoration: none;
-                    z-index: 2;
-                    position: absolute;
-                    margin: 0 !important;
-                    top: 136px;
-                    border-radius: 4px;
-                    background-color: #f9f9f9;
-                    height: 48px;
-                    overflow: hidden;
-                    flex-shrink: 0;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 8px 16px;
-                    box-sizing: border-box;
-                    text-align: center;
-                    font-size: 20px;
-                    color: #353535;
-                    font-family: estedad;
-                    box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-                    right: 55px;
+                .button-1>a,
+                .button-2>a,
+                .button-3>a,
+                .button-4>a {
+                    font-size: 16px;
                 }
-
             }
         }
     }
-
-    div.drink {
-        >img {
-            z-index: 1;
-            position: absolute;
-            margin: 0 !important;
-            max-width: 100%;
-            overflow: hidden;
-            height: 240px;
-            flex-shrink: 0;
-            top: 600px;
-            right: 1025px;
-            transition: 400ms;
-
-            &:hover {
-                position: absolute;
-                top: 550px;
-            }
-        }
-
-        div.bg-4 {
-            z-index: 0;
-            width: 287px;
-            flex: 1;
-            position: relative;
-            box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            background-color: #417f56;
-            border: 1px #417f56;
-            box-sizing: border-box;
-            height: 160px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0px 8px;
-            gap: 17px;
-            text-align: center;
-            font-size: 20px;
-            color: #353535;
-            font-family: estedad;
-            top: 270px;
-            right: 125px;
-
-            >div.button-4 {
-                >a {
-                    width: 170px;
-                    text-decoration: none;
-                    z-index: 2;
-                    position: absolute;
-                    margin: 0 !important;
-                    top: 136px;
-                    border-radius: 4px;
-                    background-color: #f9f9f9;
-                    height: 48px;
-                    overflow: hidden;
-                    flex-shrink: 0;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 8px 16px;
-                    box-sizing: border-box;
-                    text-align: center;
-                    font-size: 20px;
-                    color: #353535;
-                    font-family: estedad;
-                    box-shadow: 0px 25px 7px rgba(0, 0, 0, 0), 0px 16px 6px rgba(0, 0, 0, 0.01), 0px 9px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-                    right: 55px;
-                }
-
-            }
-        }
-    }
-
 }
+
 
 div.the-restuarant {
     position: relative;
@@ -437,8 +268,8 @@ div.the-restuarant {
     font-size: 18px;
     color: #fff;
     font-family: estedad;
-   margin-top: 500px;
-   margin-bottom: 100px;
+    margin-top: 500px;
+    margin-bottom: 100px;
 
     >.about {
         >.text-button {
