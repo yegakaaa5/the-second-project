@@ -5,83 +5,92 @@
 
 header {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   height: 100px;
-  justify-content: center;
-  gap: 220px;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
-header > div.logo img {
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
   position: relative;
-  top: 15px;
-  right: 15px;
+  height: auto;
+  max-height: 80px;
+  margin-right: 10px;
 }
-header > nav > ul {
+
+nav {
+  flex-grow: 1;
+  text-align: center;
+  margin-top: 30px;
+}
+nav > ul {
   height: inherit;
-  width: inherit;
+  width: 100%;
   list-style: none;
   display: flex;
-  gap: 70px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
-header > nav > ul > li {
+nav > ul > li {
   position: relative;
   height: inherit;
-  width: auto;
-  top: 35px;
 }
-header > nav > ul > li > a {
+nav > ul > li > a {
   position: relative;
   text-decoration: none;
   color: #717171;
-  transition: 200ms;
+  transition: color 200ms, font-weight 200ms, border-bottom 200ms;
   font-family: estedad;
 }
-header > nav > ul > li > a:hover {
+nav > ul > li > a:hover {
   color: #417F56;
   font-weight: bold;
   border-bottom: 2px solid #417F56;
   padding-bottom: 2px;
 }
-header > div.left-icon {
-  position: relative;
+
+.left-icon {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   gap: 8px;
-  top: 20px;
 }
-header > div.left-icon > img.search {
+.left-icon > img {
   border-radius: 4px;
   background-color: #e5f2e9;
   height: 40px;
-  overflow: hidden;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   padding: 8px;
   box-sizing: border-box;
+  transition: background-color 200ms;
 }
-header > div.left-icon > img.cart {
-  border-radius: 4px;
-  background-color: #e5f2e9;
-  height: 40px;
-  overflow: hidden;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  box-sizing: border-box;
-}
-header > div.left-icon > img.user {
-  border-radius: 4px;
-  background-color: #e5f2e9;
-  height: 40px;
-  overflow: hidden;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  box-sizing: border-box;
+.left-icon > img:hover {
+  background-color: #d4e9d3;
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  nav > ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .left-icon {
+    margin-top: 10px;
+  }
+}
 @font-face {
   font-family: estedad;
   src: url(/assistent/font/Estedad-v5.0-Fontjo.com/Estedad[wght\,kshd].ttf);
@@ -111,7 +120,7 @@ div.about-bg > b {
   justify-content: center;
 }
 
-div.about-us {
+.about-us {
   width: 100%;
   position: relative;
   display: flex;
@@ -123,30 +132,59 @@ div.about-us {
   font-size: 20px;
   color: #717171;
   font-family: estedad;
+  padding: 20px;
 }
-div.about-us > div.div {
+.about-us > div.div {
   width: 600px;
   position: relative;
-  line-height: 180%;
+  line-height: 1.8;
   text-transform: capitalize;
   display: inline-block;
   flex-shrink: 0;
 }
-div.about-us > div.div > p {
+.about-us > div.div > p {
   margin: 0;
 }
-div.about-us > img {
+.about-us > img {
   width: 600px;
-  position: relative;
+  height: auto;
+  max-height: 492px;
   border-radius: 8px;
-  height: 492px;
-  overflow: hidden;
-  flex-shrink: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  flex-shrink: 0;
 }
 
-div.features {
+/* Responsive styling */
+@media (max-width: 992px) {
+  .about-us {
+    gap: 16px;
+    font-size: 18px;
+  }
+  .about-us > div.div,
+  .about-us > img {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+  }
+  .about-us > div.div {
+    width: 100%;
+    padding: 0 10px;
+    text-align: justify;
+  }
+  .about-us > img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+}
+.features {
   width: 100%;
   position: relative;
   background-color: #ededed;
@@ -154,7 +192,7 @@ div.features {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 16px 0px;
+  padding: 16px 0;
   box-sizing: border-box;
   gap: 162px;
   text-align: center;
@@ -162,7 +200,10 @@ div.features {
   color: #717171;
   font-family: estedad;
 }
-div.features > div.div0 {
+.features > .div0,
+.features > .div2,
+.features > .div3,
+.features > .div4 {
   width: 184px;
   height: 136px;
   display: flex;
@@ -172,124 +213,89 @@ div.features > div.div0 {
   gap: 16px;
   z-index: 0;
 }
-div.features > div.div0 > img {
+.features > .div0 img,
+.features > .div2 img,
+.features > .div3 img,
+.features > .div4 img {
   width: 48px;
-  position: relative;
   height: 48px;
 }
-div.features > div.div0 > div.div1 {
+.features > .div0 .div1,
+.features > .div2 .div1,
+.features > .div3 .div1,
+.features > .div4 .div1 {
   width: 184px;
-  position: relative;
-  line-height: 180%;
+  line-height: 1.8;
   text-transform: capitalize;
   display: inline-block;
 }
-div.features > div.div2 {
-  width: 184px;
-  height: 136px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  z-index: 0;
-}
-div.features > div.div2 > img {
-  width: 48px;
-  position: relative;
-  height: 48px;
-}
-div.features > div.div2 > div.div1 {
-  width: 184px;
-  position: relative;
-  line-height: 180%;
-  text-transform: capitalize;
-  display: inline-block;
-}
-div.features > div.div3 {
-  width: 184px;
-  height: 136px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  z-index: 0;
-}
-div.features > div.div3 > img {
-  width: 48px;
-  position: relative;
-  height: 48px;
-}
-div.features > div.div3 > div.div1 {
-  width: 184px;
-  position: relative;
-  line-height: 180%;
-  text-transform: capitalize;
-  display: inline-block;
-}
-div.features > div.div4 {
-  width: 184px;
-  height: 136px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  z-index: 0;
-}
-div.features > div.div4 > img {
-  width: 48px;
-  position: relative;
-  height: 48px;
-}
-div.features > div.div4 > div.div1 {
-  width: 184px;
-  position: relative;
-  line-height: 180%;
-  text-transform: capitalize;
-  display: inline-block;
-}
-div.features > div.lines {
+.features > .lines {
   width: 692px;
   position: absolute;
-  margin: 0 !important;
   top: 32px;
   left: calc(50% - 346px);
   height: 103px;
   z-index: 4;
 }
-div.features > div.lines > .lines-child {
+.features > .lines .lines-child,
+.features > .lines .lines-item,
+.features > .lines .lines-inner {
   position: absolute;
+  border-right: 1px solid #cbcbcb;
+  box-sizing: border-box;
+  height: 104px;
+}
+.features > .lines .lines-child {
   width: calc(100% - 691px);
   top: -0.5px;
-  right: -0.5px;
   left: 691.5px;
-  border-right: 1px solid #cbcbcb;
-  box-sizing: border-box;
-  height: 104px;
 }
-div.features > div.lines > .lines-item {
-  position: absolute;
+.features > .lines .lines-item {
   width: calc(100% - 691px);
   top: -0.5px;
-  right: 345.5px;
   left: 345.5px;
-  border-right: 1px solid #cbcbcb;
-  box-sizing: border-box;
-  height: 104px;
 }
-div.features > div.lines > .lines-inner {
-  position: absolute;
+.features > .lines .lines-inner {
   width: calc(100% - 691px);
   top: -0.5px;
-  right: 691.5px;
   left: -0.5px;
-  border-right: 1px solid #cbcbcb;
-  box-sizing: border-box;
-  height: 104px;
 }
 
+/* Responsive Styling */
+@media (max-width: 992px) {
+  .features {
+    gap: 40px;
+    font-size: 16px;
+    padding: 16px;
+  }
+  .features > .div0,
+  .features > .div2,
+  .features > .div3,
+  .features > .div4 {
+    width: 160px;
+    height: auto;
+  }
+  .features > .lines {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .features > .div0,
+  .features > .div2,
+  .features > .div3,
+  .features > .div4 {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+  .features > .lines {
+    display: none;
+  }
+}
 footer {
   position: relative;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/assistent/image/footer-bg.webp);
@@ -297,222 +303,149 @@ footer {
   background-repeat: no-repeat;
   background-position: top;
   width: 100%;
-  height: 390px;
+  padding: 20px;
   color: #fff;
   font-family: estedad;
   margin-top: auto;
-}
-footer div.easy-access {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.easy-access,
+.the-branches,
+.massage {
+  flex: 1 1 200px;
   text-align: right;
+  font-size: 16px;
+}
+
+.easy-access .easy,
+.the-branches b,
+.massage b {
   font-size: 20px;
-  color: #fff;
-  font-family: estedad;
+  margin-bottom: 10px;
 }
-footer div.easy-access > b.easy {
-  top: 70px;
-  right: 30px;
-  width: 184px;
-  position: relative;
-  line-height: 140%;
-  display: inline-block;
-}
-footer div.easy-access > div.social-media-parent {
-  height: 147px;
+
+.social-media-parent,
+.branch-parent,
+.right form,
+.left form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  gap: 16px;
-  font-size: 14px;
-  color: #ededed;
+  gap: 10px;
 }
-footer div.easy-access > div.social-media-parent .footer-text {
-  top: 110px;
-  right: 30px;
-  position: absolute;
-  width: 172px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: 200ms;
+
+.footer-text,
+.footer-text1,
+.footer-text2,
+.ekb {
   cursor: pointer;
+  transition: color 200ms, transform 200ms;
 }
-footer div.easy-access > div.social-media-parent .footer-text:hover {
+
+.footer-text:hover,
+.footer-text1:hover,
+.footer-text2:hover,
+.ekb:hover {
   color: #417F56;
-  right: 34px;
+  transform: translateX(5px);
 }
-footer div.easy-access > div.social-media-parent .footer-text1 {
-  top: 140px;
-  right: 30px;
-  position: absolute;
+
+.social-icon {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 20px;
-  transition: 200ms;
-  cursor: pointer;
+  gap: 10px;
 }
-footer div.easy-access > div.social-media-parent .footer-text1:hover {
-  color: #417F56;
-  right: 34px;
-}
-footer div.easy-access > div.social-media-parent .footer-text2 {
-  top: 170px;
-  right: 30px;
-  position: absolute;
-  width: 172px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 40px;
-  transition: 200ms;
-  cursor: pointer;
-}
-footer div.easy-access > div.social-media-parent .footer-text2:hover {
-  color: #417F56;
-  right: 34px;
-}
-footer div.easy-access > div.social-media-parent div.social-icon {
-  width: 172px;
-  margin: 0 !important;
-  position: relative;
-  top: 123px;
-  height: 24px;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-footer div.easy-access > div.social-media-parent div.social-icon > img.footer-icon {
+
+.footer-icon {
   width: 24px;
-  position: relative;
   height: 24px;
-  overflow: hidden;
-  flex-shrink: 0;
-  top: 150px;
-  right: 30px;
-  transition: 200ms;
   cursor: pointer;
+  transition: transform 200ms;
 }
-footer div.easy-access > div.social-media-parent div.social-icon > img.footer-icon:hover {
-  right: 35px;
+
+.footer-icon:hover {
+  transform: translateX(5px);
 }
-footer > div.the-branches {
-  position: relative;
-  margin-right: 300px;
-  bottom: 122px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 16px;
-  text-align: right;
-  font-size: 20px;
-  color: #fff;
-  font-family: estedad;
-}
-footer > div.the-branches > b {
-  width: 184px;
-  position: relative;
-  display: inline-block;
-}
-footer > div.the-branches > div.branch-parent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 16px;
-  font-size: 14px;
-  color: #ededed;
-}
-footer > div.the-branches > div.branch-parent > div.ekb {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-  transition: 200ms;
-  cursor: pointer;
-}
-footer > div.the-branches > div.branch-parent > div.ekb:hover {
-  right: 8px;
-  color: #417F56;
-  position: relative;
-}
-footer > div.the-branches > div.branch-parent > div.ekb > p {
-  position: relative;
-  font-weight: 500;
-  top: 35px;
-}
-footer > div.massage {
-  position: relative;
-  height: 204px;
-  gap: 16px;
-  text-align: right;
-  font-size: 20px;
-  color: #fff;
-  font-family: estedad;
-  display: inline-block;
-}
-footer > div.massage > b {
-  width: 600px;
-  position: relative;
-  line-height: 140%;
-  display: inline-block;
-  bottom: 370px;
-  right: 610px;
-}
-footer > div.massage div.right {
-  position: absolute;
-  display: inline-block;
-  bottom: 310px;
-}
-footer > div.massage div.right > form > input {
-  width: 276px;
+
+.massage input[type=text],
+.massage input[type=number],
+.massage input[type=email],
+.massage input[type=tel] {
+  width: 100%;
+  max-width: 276px;
   height: 40px;
+  padding: 10px;
+  border: 1px solid #717171;
+  color: #F9F9F9;
+  background: transparent;
+  margin-bottom: 10px;
   border-radius: 4px;
   font-size: 15px;
-  padding: 10px;
-  border: #717171 solid 1px;
-  margin-bottom: 19px;
-  color: #F9F9F9;
 }
-footer > div.massage div.right > form > input:hover {
-  border: #fff solid 1px;
-}
-footer > div.massage div.left {
-  position: absolute;
-  display: inline-block;
-  bottom: 279px;
-  margin-right: 300px;
-}
-footer > div.massage div.left > form > input[type=tel] {
-  width: 276px;
-  height: 158px;
-  border-radius: 4px;
-  font-size: 15px;
-  padding: 10px;
-  border: #717171 solid 1px;
-  margin-bottom: 19px;
-  color: #F9F9F9;
-}
-footer > div.massage div.left > form > input[type=tel]:hover {
-  border: #fff solid 1px;
-}
-footer > div.massage div.left > form > input[type=submit] {
-  border: #717171 solid 1px;
-  width: 110px;
+
+.massage input[type=submit] {
+  width: 130px;
+  height: 30px;
   color: #757575;
   font-size: 15px;
-  width: 130px;
+  border: 1px solid #717171;
+  background: transparent;
   border-radius: 4px;
-  height: 30px;
+  cursor: pointer;
+  transition: border 200ms;
 }
-footer > div.massage div.left > form > input[type=submit]:hover {
-  border: #fff solid 1px;
+
+.massage input[type=submit]:hover,
+.massage input:hover {
+  border-color: #fff;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+  footer {
+    padding: 16px;
+    gap: 16px;
+  }
+  .easy-access,
+  .the-branches,
+  .massage {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .social-icon,
+  .branch-parent,
+  .right form,
+  .left form {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+  .easy-access,
+  .the-branches,
+  .massage {
+    font-size: 14px;
+  }
+  .easy-access .easy,
+  .the-branches b,
+  .massage b {
+    font-size: 18px;
+  }
+  .massage input[type=text],
+  .massage input[type=number],
+  .massage input[type=email],
+  .massage input[type=tel] {
+    max-width: 100%;
+  }
+  .massage input[type=submit] {
+    width: 100%;
+    max-width: 130px;
+  }
 }/*# sourceMappingURL=about.css.map */

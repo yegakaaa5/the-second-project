@@ -4,101 +4,12 @@
 
 header {
     display: flex;
+    flex-wrap: wrap; 
     width: 100%;
     height: 100px;
-    justify-content: center;
-    gap: 220px;
-
-    >div.logo {
-        img {
-
-            position: relative;
-            top: 15px;
-            right: 15px;
-        }
-    }
-
-    >nav {
-        >ul {
-            height: inherit;
-            width: inherit;
-            list-style: none;
-            display: flex;
-            gap: 70px;
-
-
-            >li {
-                position: relative;
-                height: inherit;
-                width: auto;
-                top: 35px;
-
-                >a {
-                    position: relative;
-                    text-decoration: none;
-                    color: #717171;
-                    transition: 200ms;
-                    font-family: estedad;
-
-
-                    &:hover {
-                        color: #417F56;
-                        font-weight: bold;
-                        border-bottom: 2px solid #417F56;
-                        padding-bottom: 2px;
-                        box-sizing: border-box;
-                    }
-
-                }
-            }
-        }
-    }
-
-
-    >div.left-icon {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        top: 20px;
-
-        >img.search {
-            border-radius: 4px;
-            background-color: #e5f2e9;
-            height: 40px;
-            overflow: hidden;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 8px;
-            box-sizing: border-box;
-
-        }
-
-        >img.cart {
-            border-radius: 4px;
-            background-color: #e5f2e9;
-            height: 40px;
-            overflow: hidden;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-
-        >img.user {
-            border-radius: 4px;
-            background-color: #e5f2e9;
-            height: 40px;
-            overflow: hidden;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-    }
+    justify-content: space-between; 
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 @font-face {
